@@ -1,0 +1,168 @@
+{
+  "method": "Headless actual IDEA lifecycle plus separate production Motion/CursorPainter Java2D benchmark. 1200x700 logical offscreen image at 2x, full clear each frame. CPU estimates exclude native editor repaint, glass-pane compositing, GPU and window server. Harness image is not plugin retained memory.",
+  "idleAnimationTicks": 0,
+  "results": [
+    {
+      "carets": 1,
+      "targetFPS": 60,
+      "frames": 1500,
+      "meanFrameMs": 0.320364,
+      "p95FrameMs": 0.651875,
+      "cpuMsPerFrame": 0.287163,
+      "estimatedCoreCPUPercent": 1.723,
+      "allocatedBytesPerFrame": 1000.43,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 1,
+      "targetFPS": 60,
+      "frames": 1500,
+      "meanFrameMs": 0.240356,
+      "p95FrameMs": 0.25825,
+      "cpuMsPerFrame": 0.240136,
+      "estimatedCoreCPUPercent": 1.4408,
+      "allocatedBytesPerFrame": 1002.94,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 1,
+      "targetFPS": 60,
+      "frames": 1500,
+      "meanFrameMs": 0.239838,
+      "p95FrameMs": 0.258458,
+      "cpuMsPerFrame": 0.239603,
+      "estimatedCoreCPUPercent": 1.4376,
+      "allocatedBytesPerFrame": 999.99,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 1,
+      "targetFPS": 120,
+      "frames": 1500,
+      "meanFrameMs": 0.241642,
+      "p95FrameMs": 0.26125,
+      "cpuMsPerFrame": 0.241397,
+      "estimatedCoreCPUPercent": 2.8968,
+      "allocatedBytesPerFrame": 951.99,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 1,
+      "targetFPS": 120,
+      "frames": 1500,
+      "meanFrameMs": 0.240238,
+      "p95FrameMs": 0.257209,
+      "cpuMsPerFrame": 0.240036,
+      "estimatedCoreCPUPercent": 2.8804,
+      "allocatedBytesPerFrame": 951.99,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 1,
+      "targetFPS": 120,
+      "frames": 1500,
+      "meanFrameMs": 0.239859,
+      "p95FrameMs": 0.25625,
+      "cpuMsPerFrame": 0.239679,
+      "estimatedCoreCPUPercent": 2.8761,
+      "allocatedBytesPerFrame": 951.99,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 20,
+      "targetFPS": 60,
+      "frames": 1500,
+      "meanFrameMs": 1.756812,
+      "p95FrameMs": 1.848459,
+      "cpuMsPerFrame": 1.754821,
+      "estimatedCoreCPUPercent": 10.5289,
+      "allocatedBytesPerFrame": 19847.99,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 20,
+      "targetFPS": 60,
+      "frames": 1500,
+      "meanFrameMs": 1.743486,
+      "p95FrameMs": 1.819792,
+      "cpuMsPerFrame": 1.742005,
+      "estimatedCoreCPUPercent": 10.452,
+      "allocatedBytesPerFrame": 19847.99,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 20,
+      "targetFPS": 60,
+      "frames": 1500,
+      "meanFrameMs": 1.801263,
+      "p95FrameMs": 1.850583,
+      "cpuMsPerFrame": 1.786767,
+      "estimatedCoreCPUPercent": 10.7206,
+      "allocatedBytesPerFrame": 19849.48,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 20,
+      "targetFPS": 120,
+      "frames": 1500,
+      "meanFrameMs": 1.802601,
+      "p95FrameMs": 1.8955,
+      "cpuMsPerFrame": 1.797462,
+      "estimatedCoreCPUPercent": 21.5695,
+      "allocatedBytesPerFrame": 18887.99,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 20,
+      "targetFPS": 120,
+      "frames": 1500,
+      "meanFrameMs": 1.78512,
+      "p95FrameMs": 1.874666,
+      "cpuMsPerFrame": 1.783526,
+      "estimatedCoreCPUPercent": 21.4023,
+      "allocatedBytesPerFrame": 18887.99,
+      "harnessImageRGBABytes": 13440000
+    },
+    {
+      "carets": 20,
+      "targetFPS": 120,
+      "frames": 1500,
+      "meanFrameMs": 1.779818,
+      "p95FrameMs": 1.855083,
+      "cpuMsPerFrame": 1.77864,
+      "estimatedCoreCPUPercent": 21.3437,
+      "allocatedBytesPerFrame": 18887.99,
+      "harnessImageRGBABytes": 13440000
+    }
+  ],
+  "lifecycle": [
+    {
+      "cycles": 20,
+      "sessions": 0,
+      "wholeIDEHeapBytes": 142927072
+    },
+    {
+      "cycles": 40,
+      "sessions": 0,
+      "wholeIDEHeapBytes": 144544120
+    },
+    {
+      "cycles": 60,
+      "sessions": 0,
+      "wholeIDEHeapBytes": 144546432
+    }
+  ],
+  "recordedAt": "2026-10-25T01:39:45.332916+00:00",
+  "environment": {
+    "machine": "Apple M5",
+    "memoryGiB": 32,
+    "os": "macOS-26.6.2-arm64-arm-64bit",
+    "idea": "2026.2.3",
+    "ideaBuild": "IU-262.10968.63",
+    "jbr": "25.0.4",
+    "logicalViewport": "1200x700",
+    "scale": 2,
+    "repeats": 3,
+    "framesPerSample": 1500
+  }
+}

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.vsix
+test-results/
+playwright-report/
+.DS_Store
+
+# Local development records and screenshots; public verification summaries are retained.
+docs/progress.md
+docs/superpowers/
+docs/local-vscode-*.png
+docs/vscode-integration.png
+jetbrains-neovide-cursor/docs/progress.md
+jetbrains-neovide-cursor/docs/superpowers/
+.env
+.env.*
+!.env.example

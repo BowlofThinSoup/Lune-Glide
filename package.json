@@ -1,0 +1,157 @@
+{
+  "name": "neovide-cursor",
+  "version": "0.1.3",
+  "description": "Neovide-style spring cursor animation for desktop VS Code, with reversible workbench injection.",
+  "main": "./dist/extension.cjs",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "test:browser": "playwright test",
+    "vscode:prepublish": "npm run build",
+    "package": "npm run typecheck && vsce package --no-dependencies --out lune-glide-vscode-0.1.3.vsix",
+    "build:icons": "node scripts/build-icons.mjs",
+    "benchmark": "node scripts/benchmark-renderer.mjs"
+  },
+  "keywords": [
+    "cursor",
+    "animation",
+    "neovide",
+    "smooth",
+    "trail"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.19.19",
+    "@types/vscode": "^1.95.0",
+    "@vscode/vsce": "^3.6.2",
+    "esbuild": "^0.27.4",
+    "typescript": "^5.9.3"
+  },
+  "displayName": "Lune Glide",
+  "publisher": "lune",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "neovideCursor.enable",
+        "title": "Lune Glide: Enable"
+      },
+      {
+        "command": "neovideCursor.disable",
+        "title": "Lune Glide: Disable (Restore Native Cursor)"
+      },
+      {
+        "command": "neovideCursor.repair",
+        "title": "Lune Glide: Repair After VS Code Update"
+      },
+      {
+        "command": "neovideCursor.applySettings",
+        "title": "Lune Glide: Apply Settings"
+      },
+      {
+        "command": "neovideCursor.status",
+        "title": "Lune Glide: Show Status"
+      },
+      {
+        "command": "neovideCursor.settings",
+        "title": "Lune Glide: Settings"
+      }
+    ],
+    "configuration": {
+      "title": "Lune Glide",
+      "properties": {
+        "neovideCursor.animationLength": {
+          "type": "number",
+          "default": 0.15,
+          "minimum": 0,
+          "maximum": 1,
+          "scope": "application",
+          "description": "Long movement spring duration in seconds; Neovide default is 0.15."
+        },
+        "neovideCursor.shortAnimationLength": {
+          "type": "number",
+          "default": 0.04,
+          "minimum": 0,
+          "maximum": 1,
+          "scope": "application",
+          "description": "Short movement duration in seconds; Neovide default is 0.04."
+        },
+        "neovideCursor.trailSize": {
+          "type": "number",
+          "default": 1,
+          "minimum": 0,
+          "maximum": 1,
+          "scope": "application",
+          "description": "Leading/trailing corner difference. 1 reproduces the default Neovide stretch; 0 moves all corners together."
+        },
+        "neovideCursor.particleLifetime": {
+          "type": "number",
+          "default": 0.5,
+          "minimum": 0.05,
+          "maximum": 2,
+          "scope": "application",
+          "description": "Experimental particles: lifetime in seconds."
+        },
+        "neovideCursor.particleCount": {
+          "type": "number",
+          "default": 64,
+          "minimum": 0,
+          "maximum": 256,
+          "scope": "application",
+          "description": "Experimental particles: maximum particles per editor."
+        },
+        "neovideCursor.animateTyping": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "Animate short moves while typing."
+        },
+        "neovideCursor.respectReducedMotion": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "Use the native cursor when the system requests reduced motion."
+        },
+        "neovideCursor.vfx": {
+          "type": "string",
+          "enum": [
+            "none",
+            "railgun"
+          ],
+          "default": "none",
+          "scope": "application",
+          "description": "Optional experimental particle trail. The four-corner stretch is always enabled; this is not an exact port of Neovide VFX."
+        }
+      }
+    }
+  },
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BowlofThinSoup/Lune-Glide.git"
+  },
+  "homepage": "https://github.com/BowlofThinSoup/Lune-Glide#readme",
+  "bugs": {
+    "url": "https://github.com/BowlofThinSoup/Lune-Glide/issues"
+  }
+}
