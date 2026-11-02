@@ -9,6 +9,13 @@
     Configure under Settings → Editor → Lune Glide.
     原生 JetBrains 光标动画插件，支持四角弹簧拖尾、多光标和一键关闭，无需修改 IDE 安装文件。
   ]]></description>
+  <change-notes><![CDATA[
+    <ul>
+      <li>Introducing Lune Glide, formerly Neovide Cursor, with a shared original icon.</li>
+      <li>Updated plugin, settings, and action display names while preserving existing settings and plugin identity.</li>
+      <li>Matched animated caret height, vertical offset, and scaled width to the native caret.</li>
+    </ul>
+  ]]></change-notes>
   <idea-version since-build="262" until-build="262.*"/>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
